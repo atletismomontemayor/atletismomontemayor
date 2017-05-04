@@ -52,8 +52,6 @@ public class Registrar extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jTextFieldTlfn = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jRadioButtonH = new javax.swing.JRadioButton();
-        jRadioButtonM = new javax.swing.JRadioButton();
         jCheckBoxAdministrador = new javax.swing.JCheckBox();
         jButtonBorrar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
@@ -107,15 +105,6 @@ public class Registrar extends javax.swing.JFrame {
         });
 
         jLabel3.setText("Sexo");
-
-        jRadioButtonH.setText("Hombre");
-        jRadioButtonH.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonHActionPerformed(evt);
-            }
-        });
-
-        jRadioButtonM.setText("Mujer");
 
         jCheckBoxAdministrador.setText("Administrador");
         jCheckBoxAdministrador.addActionListener(new java.awt.event.ActionListener() {
@@ -183,12 +172,8 @@ public class Registrar extends javax.swing.JFrame {
                         .addGap(41, 41, 41)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jRadioButtonH, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButtonM)))
+                        .addGap(73, 73, 73)
+                        .addComponent(jButton1)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(100, 100, 100)
@@ -231,8 +216,6 @@ public class Registrar extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButtonH)
-                            .addComponent(jRadioButtonM)
                             .addComponent(jLabel3)
                             .addComponent(jCheckBoxAdministrador))
                         .addGap(40, 40, 40))
@@ -298,10 +281,6 @@ public class Registrar extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jRadioButtonHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonHActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonHActionPerformed
 
     private void jCheckBoxAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxAdministradorActionPerformed
         // TODO add your handling code here:
@@ -417,8 +396,6 @@ public class Registrar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelNomUsuario;
     private javax.swing.JLabel jLabelNombre;
     private javax.swing.JRadioButton jRadioButtonCuenta;
-    private javax.swing.JRadioButton jRadioButtonH;
-    private javax.swing.JRadioButton jRadioButtonM;
     private javax.swing.JTextField jTextFieldApellido;
     private javax.swing.JTextField jTextFieldCuenta;
     private javax.swing.JTextField jTextFieldDNI;
