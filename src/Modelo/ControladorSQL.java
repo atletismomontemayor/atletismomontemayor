@@ -15,22 +15,24 @@ import java.sql.SQLException;
  * @author Jesús
  */
 public class ControladorSQL {
+
     private static ControladorSQL controladorSQL;
     private ConexionSQL conexion;
     private PreparedStatement pst;
     private ResultSet resultado;
-    
-    private ControladorSQL()throws ClassNotFoundException{
+
+    private ControladorSQL() throws ClassNotFoundException {
     }
-    public static ControladorSQL getControlador(){
+
+    public static ControladorSQL getControlador() {
         try {
-            if (controladorSQL == null){
+            if (controladorSQL == null) {
                 controladorSQL = new ControladorSQL();
             }
-        } catch (ClassNotFoundException e){
+        } catch (ClassNotFoundException e) {
             System.err.println("No se puede acceder al controlador SQL");
         }
-        return controladorSQL;                
+        return controladorSQL;
     }
     /**
      * METODOS DE LA CLASE CONTROLADOR
@@ -56,6 +58,5 @@ public class ControladorSQL {
         } finally{
               return numFila;
         }
-    */
+     */
 }
-

@@ -14,7 +14,8 @@ import javax.swing.JPanel;
  *
  * @author Jesús
  */
-public class MiMenuBar extends JMenuBar{
+public class MiMenuBar extends JMenuBar {
+
     //Componentes
     private JFrame ventanaPadre;
     private JMenu JMenuPerfil;
@@ -22,15 +23,15 @@ public class MiMenuBar extends JMenuBar{
     private JMenu JMenuMCarrera;
     private JMenu JMenuCorredores;
     private JMenu JMenuCerrarSesion;
-   
+
     //Constructor
-    public MiMenuBar(JFrame ventana){
+    public MiMenuBar(JFrame ventana) {
         this.ventanaPadre = ventana;
         inicializar();
-        }
-    
-    private void inicializar(){
-        
+    }
+
+    private void inicializar() {
+
         JMenuPerfil = new JMenu("Mi Perfil");
         JMenuPerfil.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -66,44 +67,47 @@ public class MiMenuBar extends JMenuBar{
         this.add(JMenuCarrera);
         this.add(JMenuCorredores);
         this.add(JMenuCerrarSesion);
-        
-     
+
     }
 
     public JMenuBar getBarraMenu() {
         return this;
     }
-    
+
     //METODOS PARA LOS EVENTOS DE JMENU
-    private void jMenuPerfilMouseClicked(java.awt.event.MouseEvent evt) {                                         
+    private void jMenuPerfilMouseClicked(java.awt.event.MouseEvent evt) {
         MiPerfil obj = new MiPerfil();
         //ventanaPadre.setVisible(false);
         obj.setVisible(true);
         ventanaPadre.dispose();
-        
+
     }
+
     private void jMenuMCarreraMouseClicked(java.awt.event.MouseEvent evt) {
         MisCarreras obj = new MisCarreras();
         //ventanaPadre.setVisible(false);
         obj.setVisible(true);
         ventanaPadre.dispose();
     }
+
     private void jMenuCarrerasMouseClicked(java.awt.event.MouseEvent evt) {
         Carreras obj = new Carreras();
         //ventanaPadre.setVisible(false);
         obj.setVisible(true);
         ventanaPadre.dispose();
     }
+
     private void jMenuCorredoresMouseClicked(java.awt.event.MouseEvent evt) {
         Corredores obj = new Corredores();
         //ventanaPadre.setVisible(false);
         obj.setVisible(true);
         ventanaPadre.dispose();
     }
-    private void jMenuCerrarSesionMouseClicked (java.awt.event.MouseEvent evt){
+
+    private void jMenuCerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {
         Principal obj = new Principal();
-        obj.setVisible (true);
+        obj.setVisible(true);
         ventanaPadre.dispose();
     }
-    
+
 }

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package GUI;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -145,11 +146,13 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
         // TODO add your handling code here:
-        if(!jTextFieldUser.getText().equals("") || !jPasswordFieldPass.getText().equals("")){
-        Sesion_Iniciada obj = new Sesion_Iniciada();
-        obj.setVisible(true);
-        dispose();
-        } else JOptionPane.showMessageDialog(this, "Rellena todos los campos", "Error", JOptionPane.ERROR_MESSAGE);
+        if (!jTextFieldUser.getText().equals("") || !jPasswordFieldPass.getText().equals("")) {
+            Sesion_Iniciada obj = new Sesion_Iniciada();
+            obj.setVisible(true);
+            dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "Rellena todos los campos", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jButtonAceptarActionPerformed
 
     private void jButtonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarActionPerformed

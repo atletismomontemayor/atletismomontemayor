@@ -122,7 +122,7 @@ public class Sesion_Iniciada extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonMiPerfilActionPerformed
 
     private void jButtonCorredoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCorredoresActionPerformed
-       Corredores obj = new Corredores();
+        Corredores obj = new Corredores();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButtonCorredoresActionPerformed
@@ -130,14 +130,14 @@ public class Sesion_Iniciada extends javax.swing.JFrame {
     private void jButtonCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarSesionActionPerformed
         // TODO add your handling code here:
         Principal obj = new Principal();
-         obj.setVisible(true);
-         dispose();
+        obj.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButtonCerrarSesionActionPerformed
 
     /**
      * @param args the command line arguments
      */
-public static void main(String args[]) {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

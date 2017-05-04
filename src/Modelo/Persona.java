@@ -1,16 +1,17 @@
 package Modelo;
 
 public class Persona {
-    	private String Nombre;
-	private String Apellidos;
-	private String DNI;
-	private int Telefono;
-	private String NombreUsuario;
-	private String Contrasenya;
-	private String Num_cuenta;
-	private boolean administrador;
-	private int anyoNacimiento;
-        
+
+    private String Nombre;
+    private String Apellidos;
+    private String DNI;
+    private int Telefono;
+    private String NombreUsuario;
+    private String Contrasenya;
+    private String Num_cuenta;
+    private boolean administrador;
+    private int anyoNacimiento;
+
     public String getNombre() {
         return Nombre;
     }
@@ -83,9 +84,9 @@ public class Persona {
         this.anyoNacimiento = anyoNacimiento;
     }
 
-	public void mostrarInfoUsuario() {
-		// TODO - implement Persona.mostrarInfoUsuario
-		throw new UnsupportedOperationException();
-	}
+    public void mostrarInfoUsuario() {
+        // TODO - implement Persona.mostrarInfoUsuario
+        throw new UnsupportedOperationException();
+    }
 
 }

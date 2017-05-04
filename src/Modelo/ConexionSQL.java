@@ -14,17 +14,18 @@ import java.sql.SQLException;
  * @author Jesús
  */
 public class ConexionSQL {
+
     private Connection conexion = null;
-    
-    public ConexionSQL (){
-        try{
+
+    public ConexionSQL() {
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             conexion = DriverManager.getConnection("jdbc:mysql://localhost/atletismo", "root", "");
-            if (conexion != null){
+            if (conexion != null) {
                 System.err.println("Conexión iniciada");
             }
-            
-        }catch (ClassNotFoundException | SQLException e){
+
+        } catch (ClassNotFoundException | SQLException e) {
             System.err.println("Conexión iniciada");
         }
     }
@@ -32,7 +33,7 @@ public class ConexionSQL {
     public Connection conectar() {
         return conexion;
     }
-    
+
     public void desconectar() throws SQLException {
         conexion.close();
         conexion = null;

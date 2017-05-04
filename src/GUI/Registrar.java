@@ -71,37 +71,15 @@ public class Registrar extends javax.swing.JFrame {
 
         jLabelContraseña.setText("Contraseña");
 
-        jTextFieldNombre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreActionPerformed(evt);
-            }
-        });
         jTextFieldNombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldNombreKeyTyped(evt);
             }
         });
 
-        jTextFieldApellido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldApellidoActionPerformed(evt);
-            }
-        });
         jTextFieldApellido.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldApellidoKeyTyped(evt);
-            }
-        });
-
-        jTextFieldNomUser.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNomUserActionPerformed(evt);
-            }
-        });
-
-        jTextFieldPass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPassActionPerformed(evt);
             }
         });
 
@@ -114,13 +92,14 @@ public class Registrar extends javax.swing.JFrame {
 
         jLabel1.setText("DNI");
 
-        jLabel2.setText("Telefono");
-
-        jTextFieldTlfn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldTlfnActionPerformed(evt);
+        jTextFieldDNI.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldDNIKeyTyped(evt);
             }
         });
+
+        jLabel2.setText("Telefono");
+
         jTextFieldTlfn.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldTlfnKeyTyped(evt);
@@ -163,6 +142,11 @@ public class Registrar extends javax.swing.JFrame {
         jTextFieldCuenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCuentaActionPerformed(evt);
+            }
+        });
+        jTextFieldCuenta.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldCuentaKeyTyped(evt);
             }
         });
 
@@ -302,36 +286,18 @@ public class Registrar extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNombreActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        if(!jTextFieldNombre.getText().equals("") || !jTextFieldApellido.getText().equals("") || !jTextFieldNomUser.getText().equals("")
-                || !jTextFieldPass.getText().equals("")){
-        Principal obj = new Principal();
-        obj.setVisible(true);
-        dispose();
-        }else JOptionPane.showMessageDialog(this, "Rellena todos los campos", "Error", JOptionPane.ERROR_MESSAGE);
-        
+        if (!jTextFieldNombre.getText().equals("") || !jTextFieldApellido.getText().equals("") || !jTextFieldNomUser.getText().equals("")
+                || !jTextFieldPass.getText().equals("")) {
+            Principal obj = new Principal();
+            obj.setVisible(true);
+            dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "Rellena todos los campos", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jTextFieldApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldApellidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldApellidoActionPerformed
-
-    private void jTextFieldNomUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomUserActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNomUserActionPerformed
-
-    private void jTextFieldPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPassActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPassActionPerformed
-
-    private void jTextFieldTlfnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTlfnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTlfnActionPerformed
 
     private void jRadioButtonHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonHActionPerformed
         // TODO add your handling code here:
@@ -347,10 +313,12 @@ public class Registrar extends javax.swing.JFrame {
 
     private void jRadioButtonCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonCuentaActionPerformed
         // TODO add your handling code here:
-         if(jRadioButtonCuenta.isSelected())
-                jTextFieldCuenta.setEnabled(true);
-            else
-                jTextFieldCuenta.setEnabled(false);
+        if (jRadioButtonCuenta.isSelected()) {
+            jTextFieldCuenta.setEnabled(true);
+        } else {
+            jTextFieldCuenta.setText("");
+            jTextFieldCuenta.setEnabled(false);
+        }
     }//GEN-LAST:event_jRadioButtonCuentaActionPerformed
 
     private void jButtonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBorrarActionPerformed
@@ -370,27 +338,65 @@ public class Registrar extends javax.swing.JFrame {
 
     private void jTextFieldNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldNombreKeyTyped
         // TODO add your handling code here:
-        char c= evt.getKeyChar();
-                if((c<'a' || c>'z') && (c<'A' || c>'Z' )) evt.consume();
+        char c = evt.getKeyChar();
+        if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z')) {
+            evt.consume();
+        }
     }//GEN-LAST:event_jTextFieldNombreKeyTyped
 
     private void jTextFieldApellidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldApellidoKeyTyped
         // TODO add your handling code here:
-        char c= evt.getKeyChar();
-                if((c<'a' || c>'z') && (c<'A' || c>'Z' )) evt.consume();
+        char c = evt.getKeyChar();
+        if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z')) {
+            evt.consume();
+        }
     }//GEN-LAST:event_jTextFieldApellidoKeyTyped
 
     private void jTextFieldTlfnKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldTlfnKeyTyped
         // TODO add your handling code here:
-        char c= evt.getKeyChar();
-                if(c<'0' || c>'9') evt.consume();
+        char c = evt.getKeyChar();
+        if (c < '0' || c > '9') {
+            evt.consume();
+        }
     }//GEN-LAST:event_jTextFieldTlfnKeyTyped
 
     private void jTextFieldNacimientoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldNacimientoKeyTyped
         // TODO add your handling code here:
-                char c= evt.getKeyChar();
-                if(c<'0' || c>'9') evt.consume();
+        int caractermax = 4;
+        if (jTextFieldNacimiento.getText().length() >= caractermax) {
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo 4 digitos");
+
+        }
+        char c = evt.getKeyChar();
+        if (c < '0' || c > '9') {
+            evt.consume();
+        }
+
     }//GEN-LAST:event_jTextFieldNacimientoKeyTyped
+
+    private void jTextFieldDNIKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDNIKeyTyped
+        // TODO add your handling code here:
+        int caractermax = 9;
+        if (jTextFieldNacimiento.getText().length() >= caractermax) {
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Solo 9 digitos");
+
+        }
+        char c = evt.getKeyChar();
+        if ((c < '0' || c > '9') && (c < 'A' || c > 'Z')) {
+            evt.consume();
+        }
+
+    }//GEN-LAST:event_jTextFieldDNIKeyTyped
+
+    private void jTextFieldCuentaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldCuentaKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if ((c < '0' || c > '9') && (c < 'A' || c > 'Z')) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextFieldCuentaKeyTyped
 
     /**
      * @param args the command line arguments

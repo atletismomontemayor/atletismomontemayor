@@ -18,7 +18,8 @@ public class Corredores extends javax.swing.JFrame {
         this.add(barra);
         initComponents();
         MiMenuBar menu = new MiMenuBar(this);
-        this.setJMenuBar(menu.getBarraMenu());    }
+        this.setJMenuBar(menu.getBarraMenu());
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -82,7 +83,6 @@ public class Corredores extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;

@@ -1,10 +1,10 @@
 package Modelo;
 
 public class Participacion {
-    
-private boolean ConfirmacionParticipacion;
-	private double tiempoDeCarrera;
-        
+
+    private boolean ConfirmacionParticipacion;
+    private double tiempoDeCarrera;
+
     public boolean isConfirmacionParticipacion() {
         return ConfirmacionParticipacion;
     }
@@ -21,16 +21,14 @@ private boolean ConfirmacionParticipacion;
         this.tiempoDeCarrera = tiempoDeCarrera;
     }
 
-	
+    public void mostrarInfoParticipacion() {
+        // TODO - implement Participacion.mostrarInfoParticipacion
+        throw new UnsupportedOperationException();
+    }
 
-	public void mostrarInfoParticipacion() {
-		// TODO - implement Participacion.mostrarInfoParticipacion
-		throw new UnsupportedOperationException();
-	}
-
-	public void anyadirTimpoCarrera() {
-		// TODO - implement Participacion.anyadirTimpoCarrera
-		throw new UnsupportedOperationException();
-	}
+    public void anyadirTimpoCarrera() {
+        // TODO - implement Participacion.anyadirTimpoCarrera
+        throw new UnsupportedOperationException();
+    }
 
 }
