@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JPanel;
@@ -13,21 +14,23 @@ import javax.swing.JPanel;
  *
  * @author Jesús
  */
-public class MiMenuBar extends JPanel{
+public class MiMenuBar extends JMenuBar{
     //Componentes
-    private JMenuBar barraMenu;
+    private JFrame ventanaPadre;
     private JMenu JMenuPerfil;
     private JMenu JMenuCarrera;
     private JMenu JMenuMCarrera;
     private JMenu JMenuCorredores;
+    private JMenu JMenuCerrarSesion;
    
     //Constructor
-    public MiMenuBar(){
+    public MiMenuBar(JFrame ventana){
+        this.ventanaPadre = ventana;
         inicializar();
         }
     
     private void inicializar(){
-        barraMenu=new JMenuBar();
+        
         JMenuPerfil = new JMenu("Mi Perfil");
         JMenuPerfil.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -52,28 +55,55 @@ public class MiMenuBar extends JPanel{
                 jMenuCarrerasMouseClicked(evt);
             }
         });
-        barraMenu.add(JMenuPerfil);
-        barraMenu.add(JMenuMCarrera);
-        barraMenu.add(JMenuCarrera);
-        barraMenu.add(JMenuCorredores);
+        JMenuCerrarSesion = new JMenu("Cerrar sesión");
+        JMenuCerrarSesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuCerrarSesionMouseClicked(evt);
+            }
+        });
+        this.add(JMenuPerfil);
+        this.add(JMenuMCarrera);
+        this.add(JMenuCarrera);
+        this.add(JMenuCorredores);
+        this.add(JMenuCerrarSesion);
+        
+     
     }
 
     public JMenuBar getBarraMenu() {
-        return barraMenu;
+        return this;
     }
     
     //METODOS PARA LOS EVENTOS DE JMENU
     private void jMenuPerfilMouseClicked(java.awt.event.MouseEvent evt) {                                         
-        System.out.println("HAS PULSADO PERFIL");
+        MiPerfil obj = new MiPerfil();
+        //ventanaPadre.setVisible(false);
+        obj.setVisible(true);
+        ventanaPadre.dispose();
+        
     }
     private void jMenuMCarreraMouseClicked(java.awt.event.MouseEvent evt) {
-        System.out.println("Has pulsado mis carreras");
+        MisCarreras obj = new MisCarreras();
+        //ventanaPadre.setVisible(false);
+        obj.setVisible(true);
+        ventanaPadre.dispose();
     }
     private void jMenuCarrerasMouseClicked(java.awt.event.MouseEvent evt) {
-        System.out.println("Has pulsado en carreras");
+        Carreras obj = new Carreras();
+        //ventanaPadre.setVisible(false);
+        obj.setVisible(true);
+        ventanaPadre.dispose();
     }
     private void jMenuCorredoresMouseClicked(java.awt.event.MouseEvent evt) {
-        System.out.println("Has pulsado en carredores");
+        Corredores obj = new Corredores();
+        //ventanaPadre.setVisible(false);
+        obj.setVisible(true);
+        ventanaPadre.dispose();
+    }
+    private void jMenuCerrarSesionMouseClicked (java.awt.event.MouseEvent evt){
+        Principal obj = new Principal();
+        obj.setVisible (true);
+        ventanaPadre.dispose();
     }
     
 }

@@ -23,22 +23,23 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jButtonCorredores" min="-2" pref="91" max="-2" attributes="0"/>
-                  <Component id="jButtonCarreras" min="-2" pref="91" max="-2" attributes="0"/>
-                  <Component id="jButtonMCarreras" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButtonMiPerfil" min="-2" pref="91" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace pref="202" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jButtonCerrarSesion" pref="123" max="32767" attributes="0"/>
+                  <Component id="jButtonCorredores" max="32767" attributes="0"/>
+                  <Component id="jButtonCarreras" max="32767" attributes="0"/>
+                  <Component id="jButtonMCarreras" max="32767" attributes="0"/>
+                  <Component id="jButtonMiPerfil" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="224" max="32767" attributes="0"/>
+              <EmptySpace pref="203" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
               <Component id="jButtonMiPerfil" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jButtonMCarreras" min="-2" max="-2" attributes="0"/>
@@ -46,7 +47,9 @@
               <Component id="jButtonCarreras" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jButtonCorredores" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="61" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jButtonCerrarSesion" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="56" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -56,6 +59,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Mi perfil"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMiPerfilActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonMCarreras">
       <Properties>
@@ -77,6 +83,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Corredores"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCorredoresActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonCerrarSesion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cerrar sesi&#xf3;n"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCerrarSesionActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

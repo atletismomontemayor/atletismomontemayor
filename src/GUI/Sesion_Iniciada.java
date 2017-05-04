@@ -31,10 +31,16 @@ public class Sesion_Iniciada extends javax.swing.JFrame {
         jButtonMCarreras = new javax.swing.JButton();
         jButtonCarreras = new javax.swing.JButton();
         jButtonCorredores = new javax.swing.JButton();
+        jButtonCerrarSesion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButtonMiPerfil.setText("Mi perfil");
+        jButtonMiPerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMiPerfilActionPerformed(evt);
+            }
+        });
 
         jButtonMCarreras.setText("Mis carreras");
         jButtonMCarreras.addActionListener(new java.awt.event.ActionListener() {
@@ -51,24 +57,37 @@ public class Sesion_Iniciada extends javax.swing.JFrame {
         });
 
         jButtonCorredores.setText("Corredores");
+        jButtonCorredores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCorredoresActionPerformed(evt);
+            }
+        });
+
+        jButtonCerrarSesion.setText("Cerrar sesión");
+        jButtonCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCerrarSesionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(213, 213, 213)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButtonCorredores, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonCarreras, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonMCarreras)
-                    .addComponent(jButtonMiPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(224, Short.MAX_VALUE))
+                .addContainerGap(202, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonCerrarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                    .addComponent(jButtonCorredores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonCarreras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonMCarreras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonMiPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(203, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(87, 87, 87)
+                .addGap(51, 51, 51)
                 .addComponent(jButtonMiPerfil)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonMCarreras)
@@ -76,24 +95,49 @@ public class Sesion_Iniciada extends javax.swing.JFrame {
                 .addComponent(jButtonCarreras)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonCorredores)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButtonCerrarSesion)
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonCarrerasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCarrerasActionPerformed
-        // TODO add your handling code here:
+        Carreras obj = new Carreras();
+        obj.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButtonCarrerasActionPerformed
 
     private void jButtonMCarrerasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMCarrerasActionPerformed
-        // TODO add your handling code here:
+        MisCarreras obj = new MisCarreras();
+        obj.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButtonMCarrerasActionPerformed
+
+    private void jButtonMiPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMiPerfilActionPerformed
+        MiPerfil obj = new MiPerfil();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButtonMiPerfilActionPerformed
+
+    private void jButtonCorredoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCorredoresActionPerformed
+       Corredores obj = new Corredores();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButtonCorredoresActionPerformed
+
+    private void jButtonCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarSesionActionPerformed
+        // TODO add your handling code here:
+        Principal obj = new Principal();
+         obj.setVisible(true);
+         dispose();
+    }//GEN-LAST:event_jButtonCerrarSesionActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -127,6 +171,7 @@ public class Sesion_Iniciada extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCarreras;
+    private javax.swing.JButton jButtonCerrarSesion;
     private javax.swing.JButton jButtonCorredores;
     private javax.swing.JButton jButtonMCarreras;
     private javax.swing.JButton jButtonMiPerfil;

@@ -62,6 +62,11 @@ public class Principal extends javax.swing.JFrame {
         jLabelRegistro.setText("Registrate aquí");
 
         jButtonRegistrar.setText("Registrar");
+        jButtonRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistrarActionPerformed(evt);
+            }
+        });
 
         jLabelFoto.setIcon(new javax.swing.ImageIcon("C:\\Users\\Jesús\\Desktop\\SUPERIOR\\PROGRAMACION\\Atletismo\\Imagenes\\logo-atletismo3.jpg")); // NOI18N
 
@@ -142,7 +147,17 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
         // TODO add your handling code here:
+        Sesion_Iniciada obj = new Sesion_Iniciada();
+        obj.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButtonAceptarActionPerformed
+
+    private void jButtonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarActionPerformed
+        // TODO add your handling code here:
+        Registrar obj = new Registrar();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButtonRegistrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,4 +207,5 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordFieldPass;
     private javax.swing.JTextField jTextFieldUser;
     // End of variables declaration//GEN-END:variables
+
 }
