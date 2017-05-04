@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package GUI;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -68,8 +69,6 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jLabelFoto.setIcon(new javax.swing.ImageIcon("C:\\Users\\Jesús\\Desktop\\SUPERIOR\\PROGRAMACION\\Atletismo\\Imagenes\\logo-atletismo3.jpg")); // NOI18N
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -126,16 +125,15 @@ public class Principal extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jPasswordFieldPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(6, 6, 6))
-                            .addComponent(jLabelContraseña))
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(jLabelContraseña)))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(251, 251, 251)
-                        .addComponent(jButtonAceptar)
-                        .addGap(44, 44, 44)))
+                        .addComponent(jButtonAceptar)))
+                .addGap(94, 94, 94)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonRegistrar)
                     .addComponent(jLabelRegistro))
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         pack();
@@ -147,9 +145,11 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
         // TODO add your handling code here:
+        if(!jTextFieldUser.getText().equals("") || !jPasswordFieldPass.getText().equals("")){
         Sesion_Iniciada obj = new Sesion_Iniciada();
         obj.setVisible(true);
         dispose();
+        } else JOptionPane.showMessageDialog(this, "Rellena todos los campos", "Error", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_jButtonAceptarActionPerformed
 
     private void jButtonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarActionPerformed
