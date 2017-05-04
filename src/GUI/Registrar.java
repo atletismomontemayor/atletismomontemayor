@@ -6,9 +6,7 @@
 package GUI;
 
 import javax.swing.JOptionPane;
-import java.awt.Checkbox;
-import java.awt.event.*;
-import javax.swing.*;
+
 
 /**
  *
@@ -300,7 +298,6 @@ public class Registrar extends javax.swing.JFrame {
         jTextFieldNombre.setText(null);
         jTextFieldPass.setText(null);
         jTextFieldTlfn.setText(null);
-        jRadioButtonCuenta.setSelected(false);
         buttonGroupSexo.clearSelection();
         jCheckBoxAdministrador.setSelected(false);
     }//GEN-LAST:event_jButtonBorrarActionPerformed
